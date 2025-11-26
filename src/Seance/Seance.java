@@ -6,14 +6,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class Seance {
-    static int idgenerator = 1;
-    private int seanceId ;
     private String dateSeance;
     private String horaire;
     private float prix ;
     private int capaciteMaximale;
     private String salle;
-    private Film film;
+    private int filmid;
 
     public float getPrix() {
         return prix;
@@ -23,23 +21,16 @@ public class Seance {
         this.prix = prix;
     }
 
-    public Seance(String dateSeance, String horaire, float prx, int capaciteMaximale, String salle, Film film){
-        this.seanceId = idgenerator++;
+    public Seance(String dateSeance, String horaire, float prx, int capaciteMaximale, String salle, int film){
         this.dateSeance = dateSeance;
         this.horaire = horaire;
         this.prix = prx;
         this.capaciteMaximale = capaciteMaximale;
         this.salle = salle;
-        this.film = film;
+        this.filmid = film;
     }
 
-    public int getSeanceId() {
-        return seanceId;
-    }
 
-    public void setSeanceId(int seanceId) {
-        this.seanceId = seanceId;
-    }
 
     public String getDateSeance() {
         return dateSeance;
@@ -73,14 +64,12 @@ public class Seance {
         this.salle = salle;
     }
 
-    public Film getFilm() {
-        return film;
+    public int getFilm() {
+        return filmid;
     }
 
-    public void setFilm(Film film) {
-        this.film = film;
+    public void setFilm(int film) {
+        this.filmid = film;
     }
-    public void afficherFilm(){
-        System.out.printf("Film title : %s \nfilm duree : %s\nfilm categorie : %s\n",film.getTitre(),film.getDuree(),film.getCategorie());
-    }
+
 }

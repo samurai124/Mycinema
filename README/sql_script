@@ -11,8 +11,8 @@ CREATE TABLE films (
 
 CREATE TABLE seances (
     seanceId INT PRIMARY KEY,
-    dateSeance DATE NOT NULL,
-    horaire TIME NOT NULL,
+    dateSeance VARCHAR(100) NOT NULL,
+    horaire VARCHAR(100) NOT NULL,
     prix FLOAT,
     capaciteMaximale INT,
     salle VARCHAR(50),
