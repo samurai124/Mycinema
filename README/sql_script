@@ -20,4 +20,11 @@ CREATE TABLE seances (
     FOREIGN KEY (filmId) REFERENCES films(filmId)
 );
 
-
+CREATE TABLE ticket(
+    ticketId INT PRIMARY KEY AUTO_INCREMENT,
+    prix FLOAT NOT NULL,
+    seanceId INT NOT NULL,
+    spectateurId INT NOT NULL,
+    FOREIGN KEY (seanceId)REFERENCES seances(seanceId),
+    FOREIGN KEY (spectateurId)REFERENCES spectateurs(spectateurId)
+);

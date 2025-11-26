@@ -8,10 +8,6 @@ import Data_base.DataBase;
 public class Main {
     public static void main(String[] args) {
         Cinema c = new Cinema();
-        DataBase db = new DataBase();
-        db.getFilmsFromDB();
-         c.ajouterFilm();
-        // c.ajouterSeance();
-        // c.supprimerFilm();
+        c.cinema();
     }
 }
