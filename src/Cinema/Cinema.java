@@ -52,4 +52,12 @@ public class Cinema {
             db.ajouteSeance(s);
         }while (ajouter.equals("oui"));
     }
+    public void supprimerSeance() {
+        db.getSeancesFromDB2();
+        System.out.print("Entrer seance id : ");
+        int seanceId = input.nextInt();
+        input.nextLine();
+        db.supprimerSeanceFromDB(seanceId);
+    }
+
 }
