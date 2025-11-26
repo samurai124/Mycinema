@@ -140,5 +140,24 @@ public class DataBase {
             e.printStackTrace();
         }
     }
+    public void supprimerSeanceFromDB(int seanceId) {
+        String supprimerSeance = "DELETE FROM seances WHERE seanceId = ?";
 
+        try (Connection con = DBconnection.getConnection();
+             PreparedStatement ps = con.prepareStatement(supprimerSeance)) {
+
+            ps.setInt(1, seanceId);
+
+            int rowsAffected = ps.executeUpdate();
+
+            if (rowsAffected > 0) {
+                System.out.println("Séance supprimée avec succès !");
+            } else {
+                System.out.println("Aucune séance trouvée avec cet ID.");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
