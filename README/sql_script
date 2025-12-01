@@ -3,7 +3,7 @@ CREATE DATABASE sg_cinema;
 USE sg_cinema;
 
 CREATE TABLE films (
-    filmId INT PRIMARY KEY,
+    filmId INT PRIMARY KEY ,
     titre VARCHAR(255) NOT NULL,
     duree VARCHAR(50),
     categorie VARCHAR(100)
