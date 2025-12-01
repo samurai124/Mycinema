@@ -3,14 +3,14 @@ CREATE DATABASE sg_cinema;
 USE sg_cinema;
 
 CREATE TABLE films (
-    filmId INT PRIMARY KEY,
+    filmId INT PRIMARY KEY AUTO_INCREMENT,
     titre VARCHAR(255) NOT NULL,
     duree VARCHAR(50),
     categorie VARCHAR(100)
 );
 
 CREATE TABLE seances (
-    seanceId INT PRIMARY KEY,
+    seanceId INT PRIMARY KEY AUTO_INCREMENT,
     dateSeance VARCHAR(100) NOT NULL,
     horaire VARCHAR(100) NOT NULL,
     prix FLOAT,
